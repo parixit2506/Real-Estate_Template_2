@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@variant dark (&:is(.dark, .dark *));
+
+@theme {
+    --dark-mode: selector;
+
+    /* Brand Identity */
+    --color-brand-primary: #1E3A8A;
+    --color-brand-primary-dark: #60A5FA;
+
+    /* Base Colors (Custom mapping for the new palette) */
+    --color-bg-main-light: #FFFFFF;
+    --color-bg-surface-light: #F8FAFC;
+    --color-text-primary-light: #0F172A;
+    --color-text-secondary-light: #475569;
+    --color-text-muted-light: #94A3B8;
+    --color-border-light: #E2E8F0;
+
+    --color-bg-main-dark: #020617;
+    --color-bg-surface-dark: #0F172A;
+    --color-text-primary-dark: #F8FAFC;
+    --color-text-secondary-dark: #CBD5E1;
+    --color-text-muted-dark: #94A3B8;
+    --color-border-dark: #1E293B;
+
+    /* Overriding standard Slate/Gray to match neutral requirements */
+    --color-slate-50: #f8fafc;
+    --color-slate-100: #f1f5f9;
+    --color-slate-200: #e2e8f0;
+    --color-slate-300: #cbd5e1;
+    --color-slate-400: #94a3b8;
+    --color-slate-500: #64748b;
+    --color-slate-600: #475569;
+    --color-slate-700: #334155;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+    --color-slate-950: #020617;
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+@layer base {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        /* slate-100 */
+    }
+
+    .dark ::-webkit-scrollbar-track {
+        background: #020617;
+        /* slate-950 */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #3b82f6, #1e3a8a);
+        /* blue-500 to brand-primary */
+        border-radius: 10px;
+        border: 2px solid #f1f5f9;
+        transition: all 0.3s ease;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+        /* brand-primary to light-blue */
+        border: 2px solid #020617;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #1e3a8a, #1e40af);
+        /* brand-primary to blue-800 */
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #3b82f6, #1e3a8a);
+    }
+
+    body {
+        @apply antialiased transition-colors duration-300;
+        @apply bg-bg-main-light text-text-primary-light;
+        @apply dark:bg-bg-main-dark dark:text-text-primary-dark;
+        overflow-x: hidden;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+
+    /* Prevent iOS input auto-zoom */
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='tel'],
+    input[type='number'],
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    * {
+        @apply box-border;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: var(--color-brand-primary);
+        border-radius: 20px;
+    }
+
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-brand-primary) transparent;
+    }
+}
+
+@layer utilities {
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .glass-badge {
+        @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-lg;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}
