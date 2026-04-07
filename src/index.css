@@ -164,4 +164,8 @@ html.lenis body {
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
     }
+
+    .section-padding {
+        @apply py-14 md:py-18 lg:py-22;
+    }
 }

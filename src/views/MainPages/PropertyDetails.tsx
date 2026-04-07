@@ -102,7 +102,7 @@ const PropertyDetails = () => {
             </section>
 
             {/* Main Narrative Area */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20 lg:py-24">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-padding">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20">
                     {/* Left Column */}
                     <div className="lg:col-span-8 space-y-20 sm:space-y-24 lg:space-y-32">
@@ -266,7 +266,7 @@ const PropertyDetails = () => {
 
             {/* Other Properties */}
             {relatedProperties.length > 0 && (
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-padding">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
                         <div className="max-w-xl">
                             <span className="text-brand-primary dark:text-brand-primary-dark text-[10px] font-bold uppercase tracking-[0.4em] block mb-3">

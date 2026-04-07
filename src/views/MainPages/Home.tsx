@@ -288,7 +288,7 @@ const Home = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="bg-white dark:bg-slate-950 py-16 border-y border-slate-200 dark:border-slate-900 transition-colors">
+            <section className="bg-white dark:bg-slate-950 section-padding border-y border-slate-200 dark:border-slate-900 transition-colors">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
                         {[
@@ -316,7 +316,7 @@ const Home = () => {
             </section>
 
             {/* Featured Properties Section */}
-            <section className="py-24 bg-slate-50 dark:bg-slate-950">
+            <section className="section-padding bg-slate-50 dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -352,7 +352,7 @@ const Home = () => {
             </section>
 
             {/* Curated Selection Section */}
-            <section className="py-24 bg-slate-50 dark:bg-slate-950">
+            <section className="section-padding bg-slate-50 dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <motion.div
@@ -387,7 +387,7 @@ const Home = () => {
             </section>
 
             {/* About Section - Premium Editorial Redesign */}
-            <section id="about" className="py-16 sm:py-24 bg-white dark:bg-slate-950 overflow-hidden relative">
+            <section id="about" className="section-padding bg-white dark:bg-slate-950 overflow-hidden relative">
                 {/* Background decorative elements */}
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50 dark:bg-slate-900/50 -z-10 translate-x-1/2 rounded-full blur-3xl opacity-50" />
                 <div className="absolute bottom-0 left-0 w-1/4 h-64 bg-brand-primary/5 -z-10 -translate-x-1/2 rounded-full blur-3xl opacity-50" />
@@ -520,7 +520,7 @@ const Home = () => {
             </section>
 
             {/* Featured Neighborhoods / Cities */}
-            <section className="py-24 bg-slate-50 dark:bg-slate-900 overflow-hidden">
+            <section className="section-padding bg-slate-50 dark:bg-slate-900 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
                         <motion.div
@@ -645,7 +645,7 @@ const Home = () => {
             </section>
 
             {/* Pricing Section */}
-            <section className="py-24 bg-white dark:bg-slate-950 overflow-hidden">
+            <section className="section-padding bg-white dark:bg-slate-950 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -1155,7 +1155,7 @@ const Home = () => {
             </section>
 
             {/* Blog Section */}
-            <section className="py-24 bg-white dark:bg-slate-950 overflow-hidden">
+            <section className="section-padding bg-white dark:bg-slate-950 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <motion.div

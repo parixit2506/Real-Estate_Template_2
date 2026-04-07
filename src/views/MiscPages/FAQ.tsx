@@ -98,7 +98,7 @@ const FAQ = () => {
             </div>
 
             {/* Controls & Results */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 section-padding">
                 {/* Category Tabs */}
                 <div className="flex flex-wrap gap-2 mb-12 justify-center">
                     {categories.map(cat => (
@@ -128,7 +128,7 @@ const FAQ = () => {
                             />
                         ))
                     ) : (
-                        <div className="text-center py-20">
+                        <div className="text-center section-padding">
                             <div className="text-4xl mb-6 opacity-20">🔍</div>
                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">No results found</h3>
                             <p className="text-slate-500 dark:text-slate-400 font-light">Try adjusting your search or category filters.</p>

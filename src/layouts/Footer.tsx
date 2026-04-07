@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 dark:bg-blue-600/5 blur-[120px] rounded-full -z-10" />
 
             {/* Newsletter Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 border-b border-slate-100 dark:border-slate-900/50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 border-b border-slate-100 dark:border-slate-900/50">
                 <div className="relative p-8 md:p-12 rounded-[2.5rem] bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 backdrop-blur-sm overflow-hidden group">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 blur-[100px] -z-10 group-hover:bg-brand-primary/20 transition-all duration-700" />
 

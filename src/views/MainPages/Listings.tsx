@@ -277,7 +277,7 @@ const Listings = () => {
             </div>
 
             {/* Results Grid */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-padding">
                 <div className="flex items-center justify-between mb-8 border-b border-slate-100 dark:border-slate-900 pb-4">
                     <p className="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em]">
                         Showing <span className="text-slate-900 dark:text-white">{total}</span> Result{total !== 1 && 's'}
