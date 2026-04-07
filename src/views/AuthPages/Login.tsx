@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '@/context/AuthContext';
 import Button from '@/components/ui/Button';
-import { Mail, Lock, Eye, EyeOff, Chrome, Github, ArrowLeft } from 'lucide-react';
-import loginBg from '../../assets/login-bg.png';
+import { Mail, Lock, Eye, EyeOff, Chrome, Github } from 'lucide-react';
+import AuthSidePanel from '@/components/common/AuthSidePanel';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -50,39 +50,7 @@ const Login = () => {
     return (
         <div className="min-h-screen flex bg-white dark:bg-bg-main-dark overflow-hidden selection:bg-brand-primary/10">
             {/* Split Screen - Image Side */}
-            <div className="hidden lg:flex lg:w-1/2 relative">
-                <div
-                    className="absolute inset-0 bg-cover bg-center grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
-                    style={{ backgroundImage: `url(${loginBg})` }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-transparent to-black/20" />
-                </div>
-                <div className="relative z-10 flex flex-col justify-end p-12 text-white">
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
-                    >
-                        <h2 className="text-5xl font-bold mb-4 leading-tight">Elite Real Estate <br />Collection</h2>
-                        <p className="text-xl text-white/80 font-light max-w-md">Discover ultra-luxury properties curated for the most discerning investors and clients globally.</p>
-                    </motion.div>
-                </div>
-
-                {/* Floating Back Button */}
-                <Link
-                    to="/"
-                    className="absolute top-8 left-8 z-50 flex items-center gap-2 px-5 py-2.5 rounded-full glass-badge hover:bg-white/20 transition-all group overflow-hidden"
-                >
-                    <motion.div
-                        initial={{ x: 0 }}
-                        whileHover={{ x: -3 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                    >
-                        <ArrowLeft className="w-4 h-4 text-white" />
-                    </motion.div>
-                    <span className="text-sm font-semibold text-white tracking-wide">Back to Home</span>
-                </Link>
-            </div>
+            <AuthSidePanel />
 
             {/* Split Screen - Form Side */}
             <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16 bg-slate-50 dark:bg-bg-main-dark relative">

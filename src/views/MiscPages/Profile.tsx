@@ -89,6 +89,26 @@ const Profile = () => {
         return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
     }, []);
 
+    const completionStats = useMemo(() => {
+        const fields = [
+            { key: 'name', weight: 1 },
+            { key: 'email', weight: 1 },
+            { key: 'location', weight: 1 },
+            { key: 'phone', weight: 1 },
+            { key: 'bio', weight: 1 },
+            { key: 'avatarUrl', weight: 1 }
+        ];
+
+        const filled = fields.filter(f => userForm[f.key as keyof typeof userForm]?.trim() !== '').length;
+        const percentage = Math.round((filled / fields.length) * 100);
+
+        const radius = 60;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percentage / 100) * circumference;
+
+        return { percentage, radius, circumference, offset };
+    }, [userForm]);
+
     const handleSave = (e: React.FormEvent) => {
         e.preventDefault();
         setEditing(false);
@@ -146,17 +166,51 @@ const Profile = () => {
                             {/* Decorative Background */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/5 blur-3xl -z-10 group-hover:bg-brand-primary/10 transition-colors" />
 
-                            <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
-                                <div className="relative">
-                                    <div className="w-24 h-24 rounded-full overflow-hidden ring-4 ring-brand-primary/10 group-hover:ring-brand-primary/30 transition-all">
-                                        <img
-                                            src={userForm.avatarUrl}
-                                            alt={userForm.name}
-                                            className="w-full h-full object-cover"
-                                        />
+                            <div className="flex flex-col sm:flex-row items-center gap-10 mb-8">
+                                <div className="relative group shrink-0">
+                                    <div className="relative w-32 h-32 flex items-center justify-center">
+                                        {/* Progress Circle SVG */}
+                                        <svg className="absolute inset-0 w-full h-full -rotate-90">
+                                            <circle
+                                                cx="50%"
+                                                cy="50%"
+                                                r={completionStats.radius}
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                fill="transparent"
+                                                className="text-slate-100 dark:text-slate-800"
+                                            />
+                                            <motion.circle
+                                                initial={{ strokeDashoffset: completionStats.circumference }}
+                                                animate={{ strokeDashoffset: completionStats.offset }}
+                                                transition={{ duration: 1.5, ease: "easeOut" }}
+                                                cx="50%"
+                                                cy="50%"
+                                                r={completionStats.radius}
+                                                stroke="currentColor"
+                                                strokeWidth="4"
+                                                fill="transparent"
+                                                strokeDasharray={completionStats.circumference}
+                                                strokeLinecap="round"
+                                                className="text-brand-primary"
+                                            />
+                                        </svg>
+
+                                        <div className="w-24 h-24 rounded-full overflow-hidden ring-2 ring-white dark:ring-slate-900 shadow-xl z-10 transition-transform duration-500 group-hover:scale-105">
+                                            <img
+                                                src={userForm.avatarUrl}
+                                                alt={userForm.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+
+                                        {/* Percentage Badge */}
+                                        <div className="absolute -top-1 -right-1 bg-brand-primary text-white font-black text-[9px] w-9 h-9 rounded-full flex flex-col items-center justify-center border-4 border-white dark:border-slate-900 z-20 shadow-lg">
+                                            <span>{completionStats.percentage}%</span>
+                                        </div>
                                     </div>
-                                    <div className="absolute bottom-1 right-1 w-6 h-6 bg-brand-primary text-white rounded-full flex items-center justify-center border-2 border-white dark:border-slate-900">
-                                        <Shield size={12} fill="currentColor" />
+                                    <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-brand-primary text-white rounded-full flex items-center justify-center border-4 border-white dark:border-slate-900 shadow-lg z-20 group-hover:scale-110 transition-transform">
+                                        <Shield size={14} fill="currentColor" />
                                     </div>
                                 </div>
                                 <div className="text-center sm:text-left">
@@ -460,14 +514,14 @@ const Profile = () => {
                                             </div>
                                         </div>
 
-                                        <div className="p-8 border-t border-slate-100 dark:border-slate-800 flex gap-4">
-                                            <button className="flex-1 px-8 py-4 bg-brand-primary text-white rounded-2xl text-xs font-bold uppercase tracking-widest shadow-xl shadow-brand-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                                        <div className="p-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row gap-3">
+                                            <button className="flex-1 px-8 py-4 bg-brand-primary text-white rounded-2xl text-xs font-bold uppercase tracking-widest shadow-xl shadow-brand-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 order-1 sm:order-1">
                                                 Respond Now
                                                 <ArrowUpRight size={14} />
                                             </button>
                                             <button
                                                 onClick={() => setShowInquiryModal(false)}
-                                                className="px-8 py-4 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl text-xs font-bold uppercase tracking-widest border border-slate-100 dark:border-slate-800 hover:bg-slate-100 transition-all"
+                                                className="px-8 py-4 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl text-xs font-bold uppercase tracking-widest border border-slate-100 dark:border-slate-800 hover:bg-slate-100 transition-all order-2 sm:order-2"
                                             >
                                                 Close
                                             </button>
@@ -548,17 +602,17 @@ const Profile = () => {
                                         className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-3xl px-5 py-4 outline-none focus:ring-2 focus:ring-brand-primary/20 transition-all text-sm resize-none"
                                     />
                                 </div>
-                                <div className="flex gap-4 pt-4">
+                                <div className="flex flex-col sm:flex-row gap-3 pt-4">
                                     <button
                                         type="button"
                                         onClick={() => setEditing(false)}
-                                        className="flex-1 px-8 py-4 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl text-xs font-bold uppercase tracking-widest border border-slate-100 dark:border-slate-800 hover:bg-slate-100 transition-all"
+                                        className="flex-1 px-8 py-4 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl text-xs font-bold uppercase tracking-widest border border-slate-100 dark:border-slate-800 hover:bg-slate-100 transition-all order-2 sm:order-1"
                                     >
                                         Discard Changes
                                     </button>
                                     <button
                                         type="submit"
-                                        className="flex-1 px-8 py-4 bg-brand-primary text-white rounded-2xl text-xs font-bold uppercase tracking-widest shadow-xl shadow-brand-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                                        className="flex-1 px-8 py-4 bg-brand-primary text-white rounded-2xl text-xs font-bold uppercase tracking-widest shadow-xl shadow-brand-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all order-1 sm:order-2"
                                     >
                                         Save Profile
                                     </button>

@@ -71,7 +71,7 @@ const Navbar = () => {
                     >
                         <div className="relative w-32 h-13">
                             <img
-                                src={isDark ? '/For Dark Theme.svg' : '/For Light Theme.svg'}
+                                src={isDark || (!forceSolid && !menuOpen) ? '/For Dark Theme.svg' : '/For Light Theme.svg'}
                                 className={'absolute inset-0 w-full h-full object-contain transition-opacity duration-300'}
                                 alt="AuraProperties Logo"
                             />

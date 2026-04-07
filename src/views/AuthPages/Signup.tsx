@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '@/context/AuthContext';
 import Button from '@/components/ui/Button';
-import { Mail, Lock, User, Building, Eye, EyeOff, Chrome, Github, CheckCircle2, ArrowLeft } from 'lucide-react';
-import signupBg from '../../assets/signup-bg.png';
+import { Mail, Lock, User, Building, Eye, EyeOff, Chrome, Github, CheckCircle2 } from 'lucide-react';
+import AuthSidePanel from '@/components/common/AuthSidePanel';
 
 const Signup = () => {
     const [userType, setUserType] = useState<'guest' | 'vendor'>('guest');
@@ -60,60 +60,7 @@ const Signup = () => {
     return (
         <div className="min-h-screen flex bg-white dark:bg-bg-main-dark overflow-hidden selection:bg-brand-primary/10">
             {/* Split Screen - Image Side */}
-            <div className="hidden lg:flex lg:w-1/2 relative bg-slate-900 border-r border-slate-200 dark:border-slate-800">
-                <div
-                    className="absolute inset-0 bg-cover bg-center grayscale-[0.3] hover:grayscale-0 transition-all duration-1000 opacity-60"
-                    style={{ backgroundImage: `url(${signupBg})` }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/90 via-brand-primary/40 to-transparent" />
-                </div>
-
-                {/* Floating Back Button */}
-                <Link
-                    to="/"
-                    className="absolute top-8 left-8 z-50 flex items-center gap-2 px-5 py-2.5 rounded-full glass-badge hover:bg-white/20 transition-all group overflow-hidden"
-                >
-                    <motion.div
-                        initial={{ x: 0 }}
-                        whileHover={{ x: -3 }}
-                        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                    >
-                        <ArrowLeft className="w-4 h-4 text-white" />
-                    </motion.div>
-                    <span className="text-sm font-semibold text-white tracking-wide">Back to Home</span>
-                </Link>
-
-                <div className="relative z-10 flex flex-col justify-center p-16 h-full text-white">
-                    <div className="space-y-8">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                        >
-                            <h2 className="text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">
-                                Build Your <br />
-                                <span className="text-white/60">Digital Legacy</span>
-                            </h2>
-                            <p className="text-xl text-white/70 font-light max-w-sm leading-relaxed italic">
-                                "The best time to buy real estate was yesterday. The second best time is now."
-                            </p>
-                        </motion.div>
-
-                        <div className="flex items-center gap-6 pt-8 border-t border-white/10">
-                            {[
-                                { label: 'Active Listings', value: '12K+' },
-                                { label: 'Verified Agents', value: '450+' },
-                                { label: 'Global Cities', value: '28' }
-                            ].map((stat, i) => (
-                                <div key={i}>
-                                    <div className="text-2xl font-bold">{stat.value}</div>
-                                    <div className="text-xs font-medium text-white/50 uppercase tracking-widest">{stat.label}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <AuthSidePanel />
 
             {/* Split Screen - Form Side */}
             <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-20 bg-white dark:bg-bg-main-dark relative overflow-y-auto">
@@ -136,20 +83,20 @@ const Signup = () => {
                                 <button
                                     type="button"
                                     onClick={() => setUserType('guest')}
-                                    className={`relative py-3 rounded-xl text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 ${userType === 'guest' ? 'bg-white dark:bg-slate-800 text-brand-primary shadow-sm ring-1 ring-slate-200 dark:ring-slate-700' : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'}`}
+                                    className={`relative py-3 rounded-xl text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 ${userType === 'guest' ? 'bg-white dark:bg-slate-800 text-brand-primary dark:text-brand-primary-dark shadow-sm ring-1 ring-slate-200 dark:ring-slate-700' : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'}`}
                                 >
                                     <User className="w-4 h-4" />
                                     <span>Guest</span>
-                                    {userType === 'guest' && <motion.div layoutId="dot" className="w-1.5 h-1.5 bg-brand-primary rounded-full" />}
+                                    {userType === 'guest' && <motion.div layoutId="dot" className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-dark rounded-full" />}
                                 </button>
                                 <button
                                     type="button"
                                     onClick={() => setUserType('vendor')}
-                                    className={`relative py-3 rounded-xl text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 ${userType === 'vendor' ? 'bg-white dark:bg-slate-800 text-brand-primary shadow-sm ring-1 ring-slate-200 dark:ring-slate-700' : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'}`}
+                                    className={`relative py-3 rounded-xl text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 ${userType === 'vendor' ? 'bg-white dark:bg-slate-800 text-brand-primary dark:text-brand-primary-dark shadow-sm ring-1 ring-slate-200 dark:ring-slate-700' : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'}`}
                                 >
                                     <Building className="w-4 h-4" />
                                     <span>Vendors</span>
-                                    {userType === 'vendor' && <motion.div layoutId="dot" className="w-1.5 h-1.5 bg-brand-primary rounded-full" />}
+                                    {userType === 'vendor' && <motion.div layoutId="dot" className="w-1.5 h-1.5 bg-brand-primary dark:bg-brand-primary-dark rounded-full" />}
                                 </button>
                             </div>
                         </motion.div>
