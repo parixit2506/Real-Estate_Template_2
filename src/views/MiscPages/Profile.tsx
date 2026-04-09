@@ -15,7 +15,7 @@ const STATIC_USER = {
         location: 'Beverly Hills, CA',
         phone: '+1 (555) 832-1920',
         bio: 'Senior Consultant with over 12 years of experience in luxury real estate. Specializing in high-end residential properties and portfolio management for elite clients.',
-        avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200',
+        avatarUrl: '/profile/profile-image.webp',
     },
 };
 

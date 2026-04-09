@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import type { Property } from '@/StaticData/property';
 
-import { optimizeUnsplashUrl } from '@/utilities/imageOptimizer';
-
 interface PropertyCardProps {
     property: Property;
     index?: number;
@@ -28,7 +26,8 @@ const PropertyCard = ({ property, index = 0 }: PropertyCardProps) => {
                         <div className="absolute inset-0 bg-slate-200/70 dark:bg-slate-800/60 animate-pulse" />
                     )}
                     <motion.img
-                        src={optimizeUnsplashUrl(property.image, 600)}
+                        srcSet={`${property.image.replace('.webp', '-thumb.webp')} 512w, ${property.image} 1024w`}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         alt={property.title}
                         loading="lazy"
                         onLoad={() => setImageLoaded(true)}

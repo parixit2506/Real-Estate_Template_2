@@ -140,7 +140,7 @@ const Home = () => {
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{
                         backgroundImage:
-                            'url(https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80)',
+                            'url(/home/hero-bg.png)',
                     }}
                 />
                 <div className="absolute inset-0 bg-linear-to-br from-slate-950/80 via-slate-950/60 to-slate-950/40" />
@@ -458,7 +458,7 @@ const Home = () => {
                                 className="absolute top-0 right-0 w-[90%] lg:w-4/5 h-[90%] lg:h-4/5 rounded-3xl overflow-hidden shadow-2xl z-10"
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80"
+                                    src="/home/about-image.webp"
                                     alt="Modern Architectural Marvel"
                                     className="w-full h-full object-cover"
                                 />
@@ -474,7 +474,7 @@ const Home = () => {
                                 className="absolute bottom-4 lg:bottom-4 left-0 w-2/5 lg:w-1/2 h-2/5 lg:h-2/3 rounded-3xl overflow-hidden shadow-2xl border-[3px] lg:border-4 border-white dark:border-slate-950 z-20"
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"
+                                    src="/home/about-image-2.webp"
                                     alt="Interior Design Detail"
                                     className="w-full h-full object-cover"
                                 />
@@ -500,7 +500,7 @@ const Home = () => {
                                 </p>
                                 <div className="flex items-center gap-2 sm:gap-3">
                                     <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-200 overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&q=80&fit=crop" alt="Reviewer" />
+                                        <img src="/home/founder-avatar.webp" alt="Reviewer" />
                                     </div>
                                     <div className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-500">James Chen</div>
                                 </div>

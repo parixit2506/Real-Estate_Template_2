@@ -7,11 +7,11 @@ const blog = [
         'category': 'Market Trends',
         'author': {
             'name': 'Alexandra Chen',
-            'image': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80'
+            'image': '/blogs/blogs-avatar/avatar-1.webp'
         },
         'date': 'May 15, 2026',
         'readTime': '5 min read',
-        'image': 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80'
+        'image': '/blogs/blogs-images/blog-1.webp'
     },
     {
         'id': '2',
@@ -21,11 +21,11 @@ const blog = [
         'category': 'Interior Design',
         'author': {
             'name': 'Marcus Johnson',
-            'image': 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80'
+            'image': '/blogs/blogs-avatar/avatar-2.webp'
         },
         'date': 'June 02, 2026',
         'readTime': '4 min read',
-        'image': 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80'
+        'image': '/blogs/blogs-images/blog-2.webp'
     },
     {
         'id': '3',
@@ -35,12 +35,12 @@ const blog = [
         'category': 'Lifestyle',
         'author': {
             'name': 'Sofia Martinez',
-            'image': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80'
+            'image': '/blogs/blogs-avatar/avatar-3.webp'
         },
         'date': 'June 10, 2026',
         'readTime': '6 min read',
-        'image': 'https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?w=800&q=80'
+        'image': '/blogs/blogs-images/blog-3.webp'
     }
 ];
 
-export default blog;
+export default blog;    

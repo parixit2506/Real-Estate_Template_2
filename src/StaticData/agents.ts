@@ -3,7 +3,7 @@ const agents = [
         'id': '1',
         'name': 'Sarah Jenkins',
         'role': 'Principal Broker',
-        'image': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+        'image': '/agents/agent-1.webp',
         'email': 'sarah@luxeestate.com',
         'phone': '+1 (555) 123-4567',
         'specialties': [
@@ -16,7 +16,7 @@ const agents = [
         'id': '2',
         'name': 'Marcus Thompson',
         'role': 'Senior Agent',
-        'image': 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+        'image': '/agents/agent-2.webp',
         'email': 'marcus@luxeestate.com',
         'phone': '+1 (555) 234-5678',
         'specialties': [
@@ -29,7 +29,7 @@ const agents = [
         'id': '3',
         'name': 'Elena Rodriguez',
         'role': 'Luxury Consultant',
-        'image': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
+        'image': '/agents/agent-3.webp',
         'email': 'elena@luxeestate.com',
         'phone': '+1 (555) 345-6789',
         'specialties': [
@@ -42,7 +42,7 @@ const agents = [
         'id': '4',
         'name': 'David Chen',
         'role': 'Market Analyst',
-        'image': 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+        'image': '/agents/agent-4.webp',
         'email': 'david@luxeestate.com',
         'phone': '+1 (555) 456-7890',
         'specialties': [
@@ -53,16 +53,16 @@ const agents = [
     },
     {
         'id': '5',
-        'name': 'Jordan Smith',
+        'name': 'Lyra Smith',
         'role': 'Global Advisor',
-        'image': 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=387&auto=format&fit=crop',
-        'email': 'jordan@luxeestate.com',
+        'image': '/agents/agent-5.webp',
+        'email': 'lyra@luxeestate.com',
         'phone': '+1 (555) 567-8901',
         'specialties': [
             'International Sales',
             'Luxury Rentals'
         ],
-        'description': 'Jordan\'s global perspective and network allow for seamless transactions across borders, specializing in the most exclusive rental markets worldwide.'
+        'description': 'Lyra\'s global perspective and network allow for seamless transactions across borders, specializing in the most exclusive rental markets worldwide.'
     }
 ];
 

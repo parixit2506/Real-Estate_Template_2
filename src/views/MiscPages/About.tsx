@@ -10,19 +10,19 @@ const team = [
     {
         name: 'Alexandra Chen',
         role: 'Founder & CEO',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+        image: '/about/team-1.webp',
         bio: '15+ years in luxury real estate. Passionate about connecting people with their dream homes.',
     },
     {
         name: 'Marcus Johnson',
         role: 'Head of Sales',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+        image: '/about/team-2.webp',
         bio: 'Expert in high-value transactions with a track record of $500M+ in closed deals.',
     },
     {
         name: 'Sofia Martinez',
         role: 'Lead Agent',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
+        image: '/about/team-3.webp',
         bio: 'Specializes in waterfront and luxury properties across Florida and the Carolinas.',
     },
 ];
@@ -43,7 +43,7 @@ const About = () => {
                     className="absolute inset-0 opacity-20 bg-cover bg-center"
                     style={{
                         backgroundImage:
-                            'url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80)',
+                            'url(/about/about-hero.png)',
                     }}
                 />
                 <div className="absolute inset-0 bg-linear-to-b from-slate-950/50 to-slate-950" />
@@ -53,7 +53,7 @@ const About = () => {
                             Our Legacy
                         </span>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 mb-6">
-                            About LuxeEstate
+                            About Aura Property
                         </h1>
                         <p className="text-slate-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
                             We believe everyone deserves a place they love to call home. Since 2010, we've
@@ -79,7 +79,7 @@ const About = () => {
                                 Redefining the Real Estate Experience
                             </h2>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 font-light">
-                                At LuxeEstate, we combine deep market expertise with cutting-edge technology to
+                                At Aura property, we combine deep market expertise with cutting-edge technology to
                                 deliver an unparalleled real estate experience. Our team of dedicated professionals
                                 is committed to finding you the perfect property.
                             </p>
@@ -95,7 +95,7 @@ const About = () => {
                             className="relative mt-8 lg:mt-0 pb-10 sm:pb-0"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+                                src="/about/about-hero.png"
                                 alt="Our office"
                                 className="rounded-2xl shadow-xl w-full object-cover h-64 sm:h-80 lg:h-96"
                             />
