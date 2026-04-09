@@ -4,7 +4,7 @@ const agents = [
         'name': 'Sarah Jenkins',
         'role': 'Principal Broker',
         'image': '/agents/agent-1.webp',
-        'email': 'sarah@luxeestate.com',
+        'email': 'sarah@auraproperty.com',
         'phone': '+1 (555) 123-4567',
         'specialties': [
             'Luxury Estates',
@@ -17,7 +17,7 @@ const agents = [
         'name': 'Marcus Thompson',
         'role': 'Senior Agent',
         'image': '/agents/agent-2.webp',
-        'email': 'marcus@luxeestate.com',
+        'email': 'marcus@auraproperty.com',
         'phone': '+1 (555) 234-5678',
         'specialties': [
             'Downtown Lofts',
@@ -30,7 +30,7 @@ const agents = [
         'name': 'Elena Rodriguez',
         'role': 'Luxury Consultant',
         'image': '/agents/agent-3.webp',
-        'email': 'elena@luxeestate.com',
+        'email': 'elena@auraproperty.com',
         'phone': '+1 (555) 345-6789',
         'specialties': [
             'Penthouse Living',
@@ -43,7 +43,7 @@ const agents = [
         'name': 'David Chen',
         'role': 'Market Analyst',
         'image': '/agents/agent-4.webp',
-        'email': 'david@luxeestate.com',
+        'email': 'david@auraproperty.com',
         'phone': '+1 (555) 456-7890',
         'specialties': [
             'Market Trends',
@@ -56,7 +56,7 @@ const agents = [
         'name': 'Lyra Smith',
         'role': 'Global Advisor',
         'image': '/agents/agent-5.webp',
-        'email': 'lyra@luxeestate.com',
+        'email': 'lyra@auraproperty.com',
         'phone': '+1 (555) 567-8901',
         'specialties': [
             'International Sales',

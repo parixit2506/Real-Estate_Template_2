@@ -305,7 +305,7 @@ const Navbar = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div className="flex flex-col">
                         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-1">Email</span>
-                        <a href="mailto:hello@luxeestate.com" className="text-lg font-medium text-slate-800 dark:text-slate-300 hover:text-brand-primary transition-colors">hello@luxeestate.com</a>
+                        <a href="mailto:hello@auraproperty.com" className="text-lg font-medium text-slate-800 dark:text-slate-300 hover:text-brand-primary transition-colors">hello@auraproperty.com</a>
                       </div>
                       <div className="flex flex-col">
                         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 mb-1">Phone</span>
@@ -314,7 +314,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center justify-end gap-4 pt-2">
-                      <span className="text-xs text-slate-400">© 2026 LuxeEstate Properties. All rights reserved.</span>
+                      <span className="text-xs text-slate-400">© 2026 AuraProperty. All rights reserved.</span>
                     </div>
                   </div>
                 </motion.div>

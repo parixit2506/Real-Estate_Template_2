@@ -122,7 +122,7 @@ const AddProperty = () => {
                             Add <span className="text-brand-primary">Property</span>
                         </h1>
                         <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-xl font-light leading-relaxed">
-                            Bring your exclusive properties to the forefront of LuxeEstate's elite collection.
+                            Bring your exclusive properties to the forefront of AuraProperty's elite collection.
                         </p>
                     </div>
 

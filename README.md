@@ -1,4 +1,4 @@
-# 🏡 LuxeEstate — Real Estate Showcase
+# 🏡 AuraProperty — Real Estate Showcase
 
 A sleek, premium real estate showcase platform built with React + Vite + TypeScript. This project focuses on high-quality presentation, immersive property galleries, and interactive mapping features.
 

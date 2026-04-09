@@ -12,7 +12,7 @@ const testimonials = [
         'name': 'David Thompson',
         'role': 'Real Estate Investor',
         'image': '/testimonials/testimonial2.webp',
-        'content': 'The analytics and lead generation tools provided by LuxeEstate are second to none. My portfolio growth has accelerated significantly since joining.',
+        'content': 'The analytics and lead generation tools provided by AuraProperty are second to none. My portfolio growth has accelerated significantly since joining.',
         'rating': 5
     },
     {
@@ -36,7 +36,7 @@ const testimonials = [
         'name': 'Sophia Laurent',
         'role': 'International Client',
         'image': '/testimonials/testimonial5.webp',
-        'content': 'Relocating from Paris was a massive undertaking, but LuxeEstate made it feel like a breeze. Their concierge approach is transformative.',
+        'content': 'Relocating from Paris was a massive undertaking, but AuraProperty made it feel like a breeze. Their concierge approach is transformative.',
         'rating': 5
     },
     {

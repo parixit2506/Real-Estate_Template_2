@@ -101,7 +101,7 @@ const Contact = () => {
                                     </svg>
                                 ),
                                 title: 'Email Inquiries',
-                                content: 'hello@luxeestate.com',
+                                content: 'hello@auraproperty.com',
                             },
                         ].map(item => (
                             <div key={item.title} className="flex gap-5 group">
@@ -178,7 +178,7 @@ const Contact = () => {
                                             required
                                             value={formData.email}
                                             onChange={handleChange}
-                                            placeholder="jane@luxeestate.com"
+                                            placeholder="jane@auraproperty.com"
                                             className="w-full px-5 py-3.5 bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 rounded-2xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-primary dark:focus:ring-brand-primary-dark/30 focus:border-brand-primary dark:focus:border-brand-primary-dark transition-all"
                                         />
                                     </div>

@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { X, MapPin, Phone, Mail, Shield, Layout, Plus, ExternalLink, TrendingUp, Users, MessageSquare, CheckCircle, Clock, Building, DollarSign, Calendar, ArrowUpRight, User } from 'lucide-react';
+import { X, MapPin, Phone, Mail, Shield, Layout, Plus, ExternalLink, TrendingUp, Users, MessageSquare, CheckCircle, Clock, Building, DollarSign, Calendar, ArrowUpRight, User, Diamond, Award, CreditCard } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import PropertyCard from '@/components/cards/PropertyCard';
 import { useFeaturedProperties } from '@/utilities/useProperties';
@@ -9,7 +9,7 @@ import { useFeaturedProperties } from '@/utilities/useProperties';
 const STATIC_USER = {
   id: 'luxe-user-id',
   name: 'Sarah Anderson',
-  email: 'sarah.anderson@luxeestate.com',
+  email: 'sarah.anderson@auraproperty.com',
   createdAt: new Date('2024-01-12').toISOString(),
   profile: {
     location: 'Beverly Hills, CA',
@@ -66,6 +66,22 @@ const INQUIRIES = [
     source: 'Referral'
   }
 ];
+
+const CURRENT_PLAN = {
+  name: 'Elite Signature',
+  tier: 'Diamond Status',
+  price: '$1,299',
+  status: 'Active',
+  expiryDate: 'Feb 20, 2027',
+  features: [
+    'Professional photography suite',
+    'Drone videography & 3D tours',
+    'Featured homepage placement',
+    'Global MLS syndication',
+    'Dedicated Account Manager',
+    'AI-Powered Lead Insights'
+  ]
+};
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -348,6 +364,75 @@ const Profile = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Membership Details Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="relative overflow-hidden group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 p-8 md:p-10"
+            >
+              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 blur-[80px] -mr-32 -mt-32 rounded-full group-hover:bg-brand-primary/10 transition-all duration-700" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/5 blur-[60px] -ml-24 -mb-24 rounded-full group-hover:bg-brand-primary/10 transition-all duration-700" />
+
+              <div className="relative z-10 flex flex-col lg:flex-row gap-10 lg:items-center">
+                <div className="lg:flex-1">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2.5 rounded-xl bg-brand-primary/10 text-brand-primary">
+                      <Diamond size={18} />
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">Subscription Status</span>
+                  </div>
+
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2 italic">
+                    {CURRENT_PLAN.name}
+                  </h2>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 flex items-center gap-2">
+                    <Award size={14} className="text-amber-500" />
+                    {CURRENT_PLAN.tier} — Your membership is currently <span className="text-green-500 font-bold">{CURRENT_PLAN.status}</span>
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {CURRENT_PLAN.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-3 group/item">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-primary scale-100 group-hover/item:scale-125 transition-transform" />
+                        <span className="text-xs text-slate-600 dark:text-slate-300 font-medium uppercase tracking-widest">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="lg:w-72 p-8 bg-slate-50 dark:bg-slate-800/50 rounded-[2rem] border border-slate-100 dark:border-slate-800">
+                  <div className="mb-6">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Annual Billing</p>
+                    <div className="flex items-baseline gap-2">
+                      <h4 className="text-3xl font-bold text-slate-900 dark:text-white">{CURRENT_PLAN.price}</h4>
+                      <span className="text-xs text-slate-400">/year</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center justify-between py-2 border-b border-slate-100 dark:border-slate-700">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 flex items-center gap-2">
+                        <Clock size={12} /> Expiry
+                      </span>
+                      <span className="text-xs font-bold text-slate-900 dark:text-white">{CURRENT_PLAN.expiryDate}</span>
+                    </div>
+                    <div className="flex items-center justify-between py-2 border-b border-slate-100 dark:border-slate-700">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 flex items-center gap-2">
+                        <CreditCard size={12} /> Auto-renew
+                      </span>
+                      <span className="text-xs font-bold text-green-500">Enabled</span>
+                    </div>
+                  </div>
+
+                  <button className="w-full py-4 bg-brand-primary text-white rounded-2xl text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-brand-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                    Manage Billing
+                    <ArrowUpRight size={14} />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Property Portfolio */}
             <div className="space-y-8">

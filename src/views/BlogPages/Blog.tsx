@@ -25,7 +25,7 @@ const Blog = () => {
                         Insights & Articles
                     </span>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mt-3 mb-6">
-                        The LuxeEstate Blog
+                        The AuraProperty Blog
                     </h1>
                     <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-light text-lg">
                         Expert perspectives on luxury real estate, market analysis, and premium lifestyle design.

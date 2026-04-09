@@ -27,7 +27,7 @@ const faqs = [
         'id': '5',
         'category': 'General',
         'question': 'What areas do you specialize in?',
-        'answer': 'LuxeEstate specializes in premium residential and commercial properties across major metropolitan hubs and desirable coastal regions, including Beverly Hills, Manhattan, Miami Beach, and Malibu.'
+        'answer': 'AuraProperty specializes in premium residential and commercial properties across major metropolitan hubs and desirable coastal regions, including Beverly Hills, Manhattan, Miami Beach, and Malibu.'
     },
     {
         'id': '6',

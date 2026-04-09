@@ -420,7 +420,7 @@ const Home = () => {
 
                                 <div className="space-y-4 lg:space-y-6 mb-8 lg:mb-10 max-w-2xl">
                                     <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed font-light">
-                                        LuxeEstate isn't just a real estate agency; we are architects of aspiration. For over a decade, we've specialized in connecting the world's most discerning individuals with extraordinary living spaces.
+                                        AuraProperty isn't just a real estate agency; we are architects of aspiration. For over a decade, we've specialized in connecting the world's most discerning individuals with extraordinary living spaces.
                                     </p>
                                     <p className="text-slate-500 dark:text-slate-500 leading-relaxed font-light text-sm sm:text-base">
                                         Our philosophy is rooted in the belief that a home is more than just a destination—it's a canvas for your life's most meaningful moments. We combine data-driven market intelligence with a deeply personal service approach.
@@ -520,7 +520,7 @@ const Home = () => {
             </section>
 
             {/* Featured Neighborhoods / Cities */}
-            <section className="section-padding bg-slate-50 dark:bg-slate-900 overflow-hidden">
+            <section className="py-18 lg:py-24 bg-slate-50 dark:bg-slate-900 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
                         <motion.div
@@ -645,7 +645,7 @@ const Home = () => {
             </section>
 
             {/* Pricing Section */}
-            <section className="section-padding bg-white dark:bg-slate-950 overflow-hidden">
+            <section className="py-18 lg:py-24 bg-white dark:bg-slate-950 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -1062,13 +1062,13 @@ const Home = () => {
                             What Our Residents Say
                         </h2>
                         <p className="text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed font-light">
-                            Hear from the families and professionals who found their perfect space with LuxeEstate.
+                            Hear from the families and professionals who found their perfect space with AuraProperty.
                         </p>
                     </motion.div>
 
                     {/* Marquee Container */}
                     {/* Desktop Marquee Style */}
-                    <div className="hidden sm:block relative mt-16 overflow-hidden py-10">
+                    <div className="hidden sm:block relative mt-16 overflow-hidden">
                         {/* Side Fades - Absolute Gradients for Premium Feel */}
                         <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-40 bg-linear-to-r from-slate-50 dark:from-slate-900 to-transparent z-10 pointer-events-none" />
                         <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-40 bg-linear-to-l from-slate-50 dark:from-slate-900 to-transparent z-10 pointer-events-none" />
@@ -1155,7 +1155,7 @@ const Home = () => {
             </section>
 
             {/* Blog Section */}
-            <section className="section-padding bg-white dark:bg-slate-950 overflow-hidden">
+            <section className="py-18 lg:py-24 bg-white dark:bg-slate-950 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <motion.div
@@ -1296,7 +1296,7 @@ const Home = () => {
             </section>
 
             {/* Values / Why Us */}
-            <section className="py-20 lg:py-32 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 overflow-hidden relative">
+            <section className="py-18 lg:py-24 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 overflow-hidden relative">
                 {/* Subtle Decorative Background */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/5 blur-[120px] rounded-full pointer-events-none opacity-50" />
 
@@ -1374,7 +1374,7 @@ const Home = () => {
             </section>
 
             {/* CTA Banner */}
-            <section className="py-20 sm:py-32 relative overflow-hidden bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50">
+            <section className="py-20 sm:py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800/50">
                 {/* Visual Interest Backgrounds */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-primary/[0.02] dark:bg-brand-primary/[0.05] skew-x-12 translate-x-1/4 -z-10" />
                 <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-brand-primary/5 dark:bg-brand-primary/10 blur-[120px] rounded-full -z-10" />
