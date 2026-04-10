@@ -314,7 +314,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="flex items-center justify-end gap-4 pt-2">
-                      <span className="text-xs text-slate-400">© 2026 AuraProperty. All rights reserved.</span>
+                      <span className="text-xs text-slate-400">© 2026 DRP Solutions. All Rights Reserved.</span>
                     </div>
                   </div>
                 </motion.div>

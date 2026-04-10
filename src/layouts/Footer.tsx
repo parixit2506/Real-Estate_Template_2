@@ -168,8 +168,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
                         <div className="space-y-2.5">
                             <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-slate-400 dark:text-slate-600 font-bold leading-relaxed px-4 sm:px-0">
-                                © {currentYear} Aura Property Group <br className="sm:hidden" />
-                                <span className="hidden sm:inline"> | </span> Definitive Excellence.
+                                © {currentYear} DRP Solutions. All Rights Reserved
                             </p>
                             <p className="text-[8px] sm:text-[9px] text-slate-400/60 font-medium tracking-wide uppercase">
                                 Licensed Estate Agent 123-456-789. All rights reserved.
